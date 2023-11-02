@@ -6,4 +6,4 @@ router.get('/', function(req, res, next) {
   res.render('rivers', { title: 'Water level search results' });
 });
 
-module.exports = router;
+module.exports = router; 

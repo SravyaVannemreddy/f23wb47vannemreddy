@@ -2,15 +2,14 @@ extends layout
 
 block content
   h1= title
- -var results =[{
-    name:"krishna", depth:"4300", origin :"mahabaleswar" },{name:"ganga", depth:"52", origin:"gangotri"},
-    {name:"kaveri", depth:"100", origin:"talakaveri"}]
-    div(class="container-fluid")
-    div(class="row")
-    each v ,index in results 
-    div(class="col-sm-2" onclick =`buy(${index})`) #{v.name},#{v.depth},#{v.origin}
-    script.
-        function buy(a)
-        {
+
+    -var results =[{name:"krishna", depth:"4300", origin :"mahabaleswar" },{name:"ganga", depth:"52", origin:"gangotri"},{name:"kaveri", depth:"100", origin:"talakaveri"}]
+  div(class="container-fluid")
+  div(class="row")
+    each f, index in results 
+     div(class="col-sm-2" onclick =`buy(${index})`) #{f.name},#{f.depth},#{f.origin}
+     script.
+         function buy(a)
+         {
             alert(`water level in the river ${a+1}`)
-        }
+         }
