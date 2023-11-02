@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+ - var results =[{
+    name:"krishna", depth:"4300", origin :"mahabaleswar" },{name:"ganga", depth:"52", origin:"gangotri"},
+    {name:"kaveri", depth:"100", origin:"talakaveri"}]
+    div(class="container-fluid")
+    div(class="row")
+    each v ,index in results 
+    div(class="col-sm-1" onClick =`buy(${index})` #{v.name},#{v.depth},{r.origin}) 
+    script 
+    function level(a)
+    {
+        alert('Water level in the river ${a+1}')
+    }
