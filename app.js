@@ -3,7 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 var River = require("./models/river");
 
 var indexRouter = require('./routes/index');
@@ -12,6 +12,8 @@ var riverRouter = require('./routes/river');
 var boardRouter = require('./routes/board');
 var chooseRouter = require('./routes/choose');
 var resourceRouter = require('./routes/resource');
+var riversRouter = require('./routes/rivers');
+var riversRouter = require('./models/rivers');
 
 var app = express();
 
@@ -69,6 +71,7 @@ app.use('/river', riverRouter);
 app.use('/board', boardRouter);
 app.use('/choose', chooseRouter);
 app.use('/resource', resourceRouter);
+app.use('/rivers', riversRouter);
 
 
 // catch 404 and forward to error handler
